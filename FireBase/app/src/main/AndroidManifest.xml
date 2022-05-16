@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.firebase">
+
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 둘다 써줘야함. -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="간병인"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FireBase"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".MyAlertActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DaeguActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SeoulActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WorkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AlertActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WelcomeActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="590eb4f8ff0d96ab01278c69f909d009" />
+    </application>
+
+</manifest>

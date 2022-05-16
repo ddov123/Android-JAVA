@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TabFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStartWithNavigation="0dp"
+        app:titleTextAppearance="@style/ToolbarTitleAppearance"
+        app:subtitleTextAppearance="@style/ToolbarSubtitleAppearance"
+        android:background="@color/cardview_light_background"
+        android:elevation="20dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ToolbarTheme"
+        app:subtitleTextColor="@color/black"
+        app:titleTextColor="@color/black">
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/border"
+            android:orientation="horizontal">
+        <ImageView
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_alternate_email_24"
+            />
+
+            <EditText
+                android:id="@+id/mEmailText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_marginLeft="30dp"
+                android:background="@color/white"
+                android:hint="이메일을 입력해주세요." />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:background="@drawable/border">
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_outline_lock_24"
+                />
+            <EditText
+                android:id="@+id/mPasswordText"
+                android:layout_margin="2dp"
+                android:hint="비밀번호를 입력해주세요."
+                android:layout_marginLeft="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/border2"
+            android:text="로그인"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/border"
+            android:drawableStart="@drawable/smalllogo"
+            android:paddingLeft="100dp"
+            android:gravity="center_vertical"
+            android:text=" 케어네이션 가입하기"
+            android:textColor="#A05C37" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="아이디 찾기"
+                android:background="@color/white"/>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="비밀번호 찾기"
+                android:background="@color/white"/>
+        </LinearLayout>
+        <View
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/btn_google"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/border"
+            android:drawableStart="@drawable/sgoogle"
+            android:gravity="center_vertical"
+            android:paddingLeft="100dp"
+            android:text=" 구글 계정으로 시작하기"
+            android:textColor="@color/black" />
+
+
+    </LinearLayout>
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+
+</LinearLayout>

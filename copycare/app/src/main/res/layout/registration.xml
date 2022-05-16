@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TabFragment">
+
+    <androidx.appcompat.widget.Toolbar
+
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStartWithNavigation="0dp"
+        app:titleTextAppearance="@style/ToolbarTitleAppearance"
+        app:subtitleTextAppearance="@style/ToolbarSubtitleAppearance"
+        android:background="@color/cardview_light_background"
+        android:elevation="20dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ToolbarTheme"
+        app:subtitleTextColor="@color/black"
+        app:titleTextColor="@color/black">
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="20dp"
+            android:background="#7878"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="맞춤형 간병설정"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="을 시작합니다"
+                android:textStyle="normal"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        </LinearLayout>
+
+        <TextView
+            android:paddingLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="&#10;보호자님에게 필요한 &#10;간병 서비스는 무엇인가요?"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="horizontal">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="10dp">
+
+                <CheckBox
+                    android:elevation="3dp"
+                    android:id="@+id/checkBox1"
+                    app:layout_constraintTop_toTopOf="@+id/btn_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+
+                <Button
+                    android:id="@+id/btn_1"
+                    android:padding="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:text="시간제 간병"
+                    android:drawableTop="@drawable/s_clock"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="10dp">
+
+
+                <CheckBox
+                    android:elevation="3dp"
+                    android:id="@+id/checkBox2"
+                    app:layout_constraintTop_toTopOf="@+id/btn_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     />
+
+                <Button
+                    android:id="@+id/btn_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:drawableTop="@drawable/s_calendar"
+                    android:padding="20dp"
+                    android:text="기간제 간병"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="0dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <TextView
+            android:paddingLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="&#10;보호자님이 원하는 &#10;간병 장소를 선택해주세요!"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="horizontal">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="10dp">
+
+                <CheckBox
+                    android:elevation="3dp"
+                    android:id="@+id/checkBox3"
+                    app:layout_constraintTop_toTopOf="@+id/btn_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+
+                <Button
+                    android:id="@+id/btn_3"
+                    android:padding="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:text="병, 의원"
+                    android:drawableTop="@drawable/s_hospital"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="10dp">
+
+
+                <CheckBox
+                    android:elevation="3dp"
+                    android:id="@+id/checkBox4"
+                    app:layout_constraintTop_toTopOf="@+id/btn_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <Button
+                    android:id="@+id/btn_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:drawableTop="@drawable/s_home"
+                    android:padding="20dp"
+                    android:text="집"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="0dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+        <Button
+            android:layout_margin="10dp"
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="다음"
+            android:background="@drawable/border2"
+
+            />
+
+    </LinearLayout>
+</LinearLayout>

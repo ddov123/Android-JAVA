@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TabFragment">
+
+    <androidx.appcompat.widget.Toolbar
+
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_light_background"
+        android:elevation="20dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ToolbarTheme"
+        app:contentInsetStartWithNavigation="0dp"
+        app:subtitleTextAppearance="@style/ToolbarSubtitleAppearance"
+        app:subtitleTextColor="@color/black"
+        app:titleTextAppearance="@style/ToolbarTitleAppearance"
+        app:titleTextColor="@color/black">
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_timespace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="notification"
+                android:textSize="50dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="[ 케어메이트의 코로나19검사 ]" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/s_corona"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="[ 간병 장소 ]" />
+                <EditText
+                    android:id="@+id/a0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:hint="간병원하시는 장소의 주소를 입력해주세요" />
+
+
+                <WebView
+                    android:id="@+id/webView_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/txt_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="받은 주소" />
+
+
+
+
+
+
+
+            </LinearLayout>
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_margin="20dp"
+                android:layout_height="400dp"
+                tools:context=".MainActivity">
+
+                <RelativeLayout
+                    android:id="@+id/map_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="[ 간병기간 ]" />
+
+                <EditText
+                    android:id="@+id/a2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:hint="Q간병 시작 희망일:(연/월/일)" />
+
+                <EditText
+                    android:id="@+id/a3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:hint="Q간병 시작 후 간병 희망 요일과 일자:(연/월/일)" />
+
+                <EditText
+                    android:id="@+id/a4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:hint="Q간병 시작 시간:(연/월/일)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="[ 환자 정보 입력 ]" />
+
+                <EditText
+                    android:id="@+id/a5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:hint="Q환자분 성함(한글 16자 이하)" />
+
+                <EditText
+                    android:id="@+id/a6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:hint="Q환자분 성별(남/여)" />
+
+
+                <EditText
+                    android:id="@+id/a7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:hint="Q환자분 나이:(세)" />
+
+                <EditText
+                    android:id="@+id/a8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:hint="Q환자분 신장:(cm)" />
+
+                <EditText
+                    android:id="@+id/a9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:hint="Q환자분 체중:(kg)" />
+
+                <EditText
+                    android:id="@+id/a10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:hint="Q진단명(자유기재)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="[ 환자 정보 상세 입력 ]" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/pinfo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/pinfo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/pinfo3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/pinfo4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/pinfo5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/pinfo6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/pinfo7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown" />
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/pinfo8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/pinfo9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/pinfo10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/pinfo11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/pinfo12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/pinfo13"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/pinfo14"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/pinfo15"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/pinfo16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/pinfo17"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/pinfo18"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown" />
+
+                <EditText
+                    android:background="@drawable/border"
+                    android:id="@+id/pinfo19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:hint="Q기타 유의 사항" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="[ 정보제공동의1 ]" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/agreement1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="[ 정보제공동의2 ]" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/agreement2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_agree"
+            android:background="@drawable/border2"
+            android:textColor="@color/white"
+            android:text="등록하기"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- TODO: Update blank fragment layout -->
+
+</LinearLayout>

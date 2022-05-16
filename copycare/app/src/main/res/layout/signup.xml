@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TabFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStartWithNavigation="0dp"
+        app:titleTextAppearance="@style/ToolbarTitleAppearance"
+        app:subtitleTextAppearance="@style/ToolbarSubtitleAppearance"
+        android:background="@color/cardview_light_background"
+        android:elevation="20dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ToolbarTheme"
+        app:subtitleTextColor="@color/black"
+        app:titleTextColor="@color/black">
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/border"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_alternate_email_24"
+                />
+            <EditText
+                android:layout_margin="2dp"
+                android:id="@+id/mEmailText"
+                android:hint="이메일을 입력해주세요."
+                android:layout_marginLeft="30dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/border"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_outline_lock_24"
+                />
+            <EditText
+                android:layout_margin="2dp"
+                android:id="@+id/mPasswordText"
+                android:hint="비밀번호를 입력해주세요."
+                android:layout_marginLeft="30dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/border"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_outline_lock_24"
+                />
+            <EditText
+                android:layout_margin="2dp"
+                android:id="@+id/mPasswordcheckText"
+                android:hint="비밀번호를 다시 입력해주세요."
+                android:layout_marginLeft="30dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/border"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_outline_man_24"
+                />
+            <EditText
+                android:layout_margin="2dp"
+                android:id="@+id/mName"
+                android:hint="성함을 입력해주세요."
+                android:layout_marginLeft="30dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/border"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_outline_calendar_month_24"
+                />
+            <EditText
+                android:layout_margin="2dp"
+                android:id="@+id/mbirth"
+                android:hint="생년월일을 입력해주세요."
+                android:layout_marginLeft="30dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/border"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="11dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_outline_phone_24" />
+            <EditText
+                android:layout_margin="2dp"
+                android:id="@+id/mphone"
+                android:hint="전화번호를 입력해주세요."
+                android:layout_marginLeft="30dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/mregisterBtn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/border2"
+            android:text="케어네이션 가입하기"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+</LinearLayout>

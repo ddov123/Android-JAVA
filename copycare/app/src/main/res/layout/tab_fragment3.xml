@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TabFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_light_background"
+        android:elevation="20dp"
+        app:titleTextAppearance="@style/ToolbarTitleAppearance"
+        app:subtitleTextAppearance="@style/ToolbarSubtitleAppearance"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ToolbarTheme"
+        app:subtitleTextColor="@color/black"
+        app:titleTextColor="@color/black">
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <Button
+            android:drawableEnd="@drawable/s_find"
+            android:id="@+id/button9"
+            android:padding="20dp"
+            android:gravity="left"
+            android:textSize="25sp"
+            android:background="@drawable/border"
+            android:layout_margin="10dp"
+            android:backgroundTint="#fafad2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:text="간병인찾기" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/button4"
+                    android:drawableRight="@drawable/s_book"
+                    android:padding="18dp"
+                    android:gravity="left"
+                    android:textSize="25sp"
+                    android:background="@drawable/border"
+                    android:layout_margin="9dp"
+                    android:backgroundTint="#dda0dd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="간병백과" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:padding="20dp"
+                    android:gravity="left"
+                    android:textSize="25sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:backgroundTint="#7fffd4"
+                    android:text="건강정보" />
+
+                <Button
+                    android:id="@+id/button8"
+                    android:padding="20dp"
+                    android:gravity="left"
+                    android:textSize="25sp"
+                    android:background="@drawable/border"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#beefff"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="간병동향\n리포트" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/button10"
+                    android:padding="20dp"
+                    android:gravity="left"
+                    android:textSize="25sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:backgroundTint="#ffefd5"
+                    android:text="간병 사고\nX파일" />
+
+                <Button
+                    android:id="@+id/button11"
+                    android:padding="20dp"
+                    android:gravity="left"
+                    android:textSize="25sp"
+                    android:background="@drawable/border"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#ffff96"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="케어네이션\n뉴스" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+</LinearLayout>

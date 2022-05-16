@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TabFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        app:layout_constraintVertical_weight="1"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="74dp"
+        android:background="@color/cardview_light_background"
+        android:elevation="20dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ToolbarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitleTextAppearance="@style/ToolbarSubtitleAppearance"
+        app:subtitleTextColor="@color/black"
+        app:titleTextAppearance="@style/ToolbarTitleAppearance"
+        app:titleTextColor="@color/black">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="케어네이션"
+            android:textColor="#A05C37"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            />
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_gravity="right"
+            android:text="회원가입 / 로그인"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:background="@drawable/buttonshape1"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <!-- 스크롤뷰안에 있는 View의 height은 값을 어떻게 지정하던지 무조건 wrap_content로 됨-->
+
+
+
+
+    <ScrollView
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint"
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+            <androidx.viewpager2.widget.ViewPager2
+                app:layout_constraintBottom_toBottomOf="@+id/constraint"
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:scaleType="fitXY"/>
+
+            <me.relex.circleindicator.CircleIndicator3
+                    app:layout_constraintBottom_toBottomOf="@+id/viewpager"
+                    android:id="@+id/indicator"
+                    android:outlineSpotShadowColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="케어네이션 이용 현황"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="bottom"
+
+                  />
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="13sp"
+                android:textColor="#8b4513"
+                android:text="서비스 출시 부터 현재까지의 기록입니다"
+
+
+                android:textAlignment="textStart"
+
+                />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingTop="20dp"
+                android:background="@drawable/border"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="케어네이션 케어메이트 현황" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="가입 케어메이트"
+                        android:textAlignment="textStart"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_many"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="명"
+                        android:textAlignment="viewEnd"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+
+                    <org.eazegraph.lib.charts.PieChart
+                        android:id="@+id/piechart"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        app:egLegendTextSize="18sp"
+                        app:egUsePieRotation="true"
+                        app:egValueTextSize="36sp" />
+
+
+                    <org.eazegraph.lib.charts.PieChart
+                        android:id="@+id/piechart2"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        app:egLegendTextSize="18sp"
+                        app:egUsePieRotation="true"
+                        app:egValueTextSize="36sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView2"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FE6DA8"
+                    android:textAlignment="center"
+                    android:text="내국인" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#56B7F1"
+                    android:textAlignment="center"
+                    android:text="외국인" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#CBFF75"
+                    android:textAlignment="center"
+                    android:text="남성" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFE65A"
+                    android:textAlignment="center"
+                    android:text="여성" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/nation1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FE6DA8"
+                    android:textAlignment="center"
+                    android:text="내국인" />
+
+                <TextView
+                    android:id="@+id/nation2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#56B7F1"
+                    android:textAlignment="center"
+                    android:text="외국인" />
+
+                <TextView
+                    android:id="@+id/gender1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#CBFF75"
+                    android:textAlignment="center"
+                    android:text="남성" />
+
+                <TextView
+                    android:id="@+id/gender2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFE65A"
+                    android:textAlignment="center"
+                    android:text="여성" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+
+                android:background="@drawable/buttonshape1"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/buttonshape1"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:text="보호자님이 남긴 후기"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ListView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/buttonshape1"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/white"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <Button
+        android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:id="@+id/btn_applyservice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonshape"
+        android:text="간병 서비스 신청하기"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

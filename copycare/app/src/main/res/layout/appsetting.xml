@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TabFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStartWithNavigation="0dp"
+        app:titleTextAppearance="@style/ToolbarTitleAppearance"
+        app:subtitleTextAppearance="@style/ToolbarSubtitleAppearance"
+        android:background="@color/cardview_light_background"
+        android:elevation="20dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ToolbarTheme"
+        app:subtitleTextColor="@color/black"
+        app:titleTextColor="@color/black">
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/buttoninappsetting"
+            android:drawableStart="@drawable/ic_outline_add_alert_24"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="알림설정" />
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/buttoninappsetting"
+            android:drawableStart="@drawable/ic_outline_login_24"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="로그아웃" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttoninappsetting"
+            android:textColor="@color/black">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ic_baseline_data_saver_off_24"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="버젼정보"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:gravity="center_vertical"
+                android:text="v1.00"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
